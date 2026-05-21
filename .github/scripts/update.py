@@ -77,9 +77,7 @@ def generate_readme(gists_data):
         readme += f"""> [!important]
 > > ##### **{format_date(latest['created_dt'])}**
 > 
-> ### [{latest['description']}]({latest['html_url']})
-> - [Gist]({latest['html_url']})
-> - [Preview]({preview_url})
+> ### [{latest['description']}]({preview_url})
 >
 > > > > > > > > > > > > > > > > > >
 """
@@ -92,7 +90,8 @@ def generate_readme(gists_data):
             readme += f"- [Gist]({gist['html_url']})\n"
             readme += f"- [Preview]({preview_url})\n\n"
 
-    readme += f"""\
+    readme += f"""
+
 > [`skchr`](https://github.com/skchr) is a facet of [@prjctimg](https://github.com/prjctimg)
 > 
 > Updated daily from gists

@@ -1,13 +1,11 @@
  > [!important]
-> > ##### **20th of May 📅**
+> > ##### **Updated daily**
 > 
-> ### [Animated Voronoi blobs (with dark/light mode palettes)](https://skchbk.prjctimg.me/sketch/23c0c2860a17f2a699c8a8578f826686)
+> ### Latest sketch
 >
 > > > > > > > > > > > > > > > > > >
 
 
 > [`skchr`](https://github.com/skchr) is a facet of [@prjctimg](https://github.com/prjctimg)
-> 
+>
 > Updated daily from gists
-
-

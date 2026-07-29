@@ -25,18 +25,21 @@ def fetch_gists(username):
     gists = []
     page = 1
     per_page = 100
-    while True:
-        url = f"https://api.github.com/users/{username}/gists?per_page={per_page}&page={page}"
-        req = urllib.request.Request(url, headers={"User-Agent": "skchr-readme-update/1.0"})
-        with urllib.request.urlopen(req) as response:
-            data = json.loads(response.read())
-            if not data:
-                break
-            gists.extend(data)
-            link_header = response.headers.get("Link", "")
-            if 'rel="next"' not in link_header:
-                break
-            page += 1
+    try:
+        while True:
+            url = f"https://api.github.com/users/{username}/gists?per_page={per_page}&page={page}"
+            req = urllib.request.Request(url, headers={"User-Agent": "skchr-readme-update/1.0"})
+            with urllib.request.urlopen(req, timeout=15) as response:
+                data = json.loads(response.read())
+                if not data:
+                    break
+                gists.extend(data)
+                link_header = response.headers.get("Link", "")
+                if 'rel="next"' not in link_header:
+                    break
+                page += 1
+    except Exception as e:
+        print(f"Warning: Failed to fetch gists: {e}", file=sys.stderr)
     return gists
 
 
@@ -110,7 +113,7 @@ def main():
             f.write(readme_content)
         print("README.md updated!", file=sys.stderr)
     else:
-        print(readme_content)
+        print(readme_content, end="")
 
 
 if __name__ == "__main__":

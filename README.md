@@ -1,7 +1,7 @@
  > [!important]
 > > ##### **20th of May 📅**
 > 
-> ### [Animated Voronoi blobs (with dark/light mode palettes)](https://skchbk.prjctimg.me/sketch/23c0c2860a17f2a699c8a8578f826686)
+> ### [Voronoi blobs](https://skchbk.prjctimg.me/sketch/23c0c2860a17f2a699c8a8578f826686)
 >
 > > > > > > > > > > > > > > > > > >
 
